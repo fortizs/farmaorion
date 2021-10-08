@@ -1,0 +1,160 @@
+﻿	 .btn-primary {
+    background-color: #b7213b;
+    border: 1px solid #b7213b; 
+}
+
+		.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open > .dropdown-toggle.btn-primary, .btn-outline-primary.active, .btn-outline-primary:active, .show > .btn-outline-primary.dropdown-toggle, .btn-outline-primary:hover, .btn-primary.active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:active, .show > .btn-primary.dropdown-toggle, .btn-primary.disabled, .btn-primary:disabled, .btn-outline-primary:not(:disabled):not(.disabled).active, .btn-outline-primary:not(:disabled):not(.disabled):active, .show > .btn-outline-primary.dropdown-toggle, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle, a.bg-primary:focus, a.bg-primary:hover, button.bg-primary:focus, button.bg-primary:hover {
+    background-color: #b7213b !important;
+    border: 1px solid #b7213b;
+}
+		 
+		.icon-user, .icon-lock5 {
+    color: #fffefe;
+    position: absolute;
+    right: 21px;
+    top: 3px;
+    padding: 4px;
+    background: #b7213b;
+    border-radius: 50%;
+} 
+
+
+		 
+
+		.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+			color: #ffffff;
+			background-color: #b7213b;
+			border-color: #b7213b #b7213b #b7213b;
+		}
+
+		input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly] {
+			cursor: not-allowed;
+			background-color: #f1f2f3 !important;
+			color: #000000;
+		}
+
+		#sidebar .theme-brand {
+			background-color: #b7213b;
+		}
+
+		.btn-primary {
+			color: #fff !important;
+			background-color: #b7213b !important;
+			border-color: #b7213b;
+			box-shadow: 0 10px 20px -10px #b7213b;
+		}
+
+		.navbar .navbar-item .nav-item.dropdown.notification-dropdown .dropdown-menu .dropdown-item:hover svg {
+			color: #b7213b;
+		}
+
+		.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:hover svg {
+			color: #b7213b;
+		}
+
+		.navbar .navbar-item .nav-item.user-profile-dropdown .dropdown-menu .dropdown-item:hover span {
+			color: #b7213b;
+		}
+
+		#sidebar ul.menu-categories li.menu > .dropdown-toggle:hover, #sidebar ul.menu-categories li.menu > .dropdown-toggle:hover svg {
+			color: #b7213b;
+		}
+
+		#sidebar ul.menu-categories ul.submenu > li a:hover {
+			color: #b7213b;
+		}
+
+		#sidebar ul.menu-categories ul.submenu > li.active a {
+			color: #b7213b;
+		}
+
+		.navbar-nav > li > a {
+			margin: 6px 3px;
+			padding: 6px 7px;
+			text-align: center;
+			min-width: 70px;
+			display: block;
+			color: #b7213b;
+		}
+
+		.navbar .navbar-nav p {
+			color: #b7213b;
+			font-weight: 700;
+		}
+		 
+		#btnGenerar {
+			display: none;
+		}
+
+		a {
+			color: #b7213b;
+		}
+
+		.sucursal {
+			font-size: 16px;
+			font-weight: 700;
+			color: #b7213b;
+			margin-top: 14px;
+		}
+
+		.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+			border-color: #b7213b;
+		}
+
+		.btn-primary:hover {
+			border-color: #b7213b;
+		}
+
+		.btn-primary:hover, .btn-primary:focus {
+    color: #fff !important;
+    background-color: #b7213b;
+    box-shadow: none;
+    border-color: #b7213b;
+}
+
+
+		::selection {
+			color: #b7213b;
+			background: #2b04ff14;
+		}
+
+
+		.modal-content .modal-footer .btn.btn-default {
+			background-color: #fff;
+			color: #b7213b;
+			font-weight: 700;
+			border: 1px solid #e8e8e8;
+		}
+
+		.panel-title {
+			font-size: 20px;
+			font-weight: bold;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #ddd;
+			color: #b7213b;
+		}
+
+		.btn.btn-default {
+			background-color: #fff;
+			color: #b7213b;
+			font-weight: 700;
+			border: 1px solid #e8e8e8;
+		}
+
+
+		
+			.ui-table .gpag span { 
+				background-color: #b7213b; 
+			}
+
+			.btn-primary {
+    color: #fff !important;
+    background-color: #ca0303 !important;
+    border-color: #ca0303;
+    box-shadow: 0 10px 20px -10px #ca0303;
+}
+
+
+			.ui-table .gpag span { 
+    background: #ca0303; 
+}

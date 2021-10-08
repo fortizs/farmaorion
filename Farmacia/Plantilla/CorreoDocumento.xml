@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<correo>
+  <asunto>{1} - {0}</asunto>
+  <cuerpo>
+    <![CDATA[
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        .firma
+        {{
+            font-size: 11px;
+            font-family: Arial;
+            color: #2b2b2b;
+        }}
+        .mensaje
+        {{
+            font-size: 12px;
+            font-family: Arial;
+        }}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="mensaje">
+            <br />
+            
+            Estimado señores : <b>{0} - {1}</b>
+            <br />
+            <br />
+            Debido a que nuestra empresa se encuentra autorizada a emitir comprobantes de pago electrónicos desde nuestros sistemas
+            <br />
+            le comunicamos que adjunto encontrará el siguiente documento electrónico y su representación impresa:
+            <br />
+            <br />
+            <b>Tipo de Comprobante : {2}</b>
+            <br />
+            <b>Numero de Comprobante: {3}</b>
+            <br />
+            <br />
+            Como medida de precaución, recomendamos consultar la validez de este documento electrónico, su autenticidad e integridad
+            <br />
+            en los siguientes links que la SUNAT ha puesto a disposición de los contribuyentes:
+            <br />
+            <br />
+            <a href="http://www.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm" target="_blank" data-saferedirecturl="https://www.google.com/url?q=http://www.sunat.gob.pe/ol-ti-itconsvalicpe/ConsValiCpe.htm&amp;source=gmail&amp;ust=1596203977743000&amp;usg=AFQjCNGnMy-XsaSQjOZo4iG_AWCUBlu7Aw">http://www.sunat.gob.pe/ol-ti-<wbr>itconsvalicpe/ConsValiCpe.htm</a>
+             
+            <br /> 
+            <br />   
+            <br />
+            Saludos,
+            <br />  
+            <br /> 
+        </div>
+        <br />
+        <br />        
+        <br />
+        <div class="firma">
+            Importante: Este es un mensaje autogenerado, no responda a este mensaje.
+        </div>
+    </div>
+</body>
+</html>   ]]>
+  </cuerpo>
+</correo> 

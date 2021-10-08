@@ -1,0 +1,52 @@
+<asp:TextBox runat="server" CssClass="form-control"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control requerido" SkinID="ui-textbox-requerido"></asp:TextBox>
+ 
+<asp:TextBox runat="server" CssClass="form-control ui-com-fecha-custom" SkinID="ui-textbox-fecha-custom"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-fecha" SkinID="ui-textbox-fecha"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-fecha requerido" SkinID="ui-textbox-fecha-requerido"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-fecha-simple" SkinID="ui-textbox-fecha-simple"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-fecha-simple requerido" SkinID="ui-textbox-fecha-simple-requerido"></asp:TextBox>
+  
+<asp:TextBox runat="server" CssClass="form-control ui-com-number" SkinID="ui-textbox-number"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-number requerido" SkinID="ui-textbox-number-requerido"></asp:TextBox>
+
+<asp:TextBox runat="server" CssClass="form-control ui-com-price" SkinID="ui-textbox-price"></asp:TextBox>
+<asp:TextBox runat="server" CssClass="form-control ui-com-price requerido" SkinID="ui-textbox-price-requerido"></asp:TextBox>
+
+<asp:TextBox runat="server" CssClass="form-control ui-com-price4 requerido" SkinID="ui-textbox-price4-requerido"></asp:TextBox>
+
+<asp:DropDownList runat="server" CssClass="form-control"></asp:DropDownList>
+<asp:DropDownList runat="server" CssClass="form-control requerido" SkinID="ui-dropdownlist-requerido"></asp:DropDownList>
+ 
+<asp:Button runat="server" CssClass="btn btn-wide btn-primary"></asp:Button>
+<asp:Button runat="server" CssClass="btn btn-wide btn-default" SkinID="ui-boton-default"></asp:Button>
+<asp:Button runat="server" CssClass="btn btn-wide btn-danger" SkinID="ui-boton-danger"></asp:Button>
+<asp:Button runat="server" CssClass="btn btn-wide btn-warning" SkinID="ui-boton-warning"></asp:Button>
+<asp:Button runat="server" CssClass="btn btn-wide btn-info" SkinID="ui-boton-info"></asp:Button>
+<asp:Button runat="server" CssClass="btn btn-wide btn-success" SkinID="ui-boton-success"></asp:Button>
+  
+<asp:LinkButton runat="server" CssClass="btn btn-default btn-xs" SkinID="ui-link-boton-default"></asp:LinkButton>
+<asp:LinkButton runat="server" CssClass="btn btn-primary btn-xs" SkinID="ui-link-boton-primario"></asp:LinkButton>
+<asp:LinkButton runat="server" CssClass="btn btn-secundary btn-xs" SkinID="ui-link-boton-secundario"></asp:LinkButton> 
+<asp:LinkButton runat="server" CssClass="btn btn-danger btn-xs" SkinID="ui-link-boton-danger"></asp:LinkButton>
+<asp:LinkButton runat="server" CssClass="btn btn-pink btn-xs" SkinID="ui-link-boton-pink"></asp:LinkButton>
+<asp:LinkButton runat="server" CssClass="btn btn-success btn-xs" SkinID="ui-link-boton-success"></asp:LinkButton>
+<asp:LinkButton runat="server" CssClass="btn btn-info btn-xs" SkinID="ui-link-boton-info"></asp:LinkButton>
+ 
+
+
+<asp:GridView runat="server" CssClass="ui-table" Width="100%" AutoGenerateColumns="False" AllowPaging="True" PageSize="10">
+    <AlternatingRowStyle CssClass="galt" />
+    <FooterStyle CssClass="gfot" />
+    <HeaderStyle CssClass="ghed" />
+    <PagerStyle CssClass="gpag" />
+    <RowStyle CssClass="grow" />
+    <SelectedRowStyle CssClass="gsel" />
+    <PagerSettings Mode="NumericFirstLast" PageButtonCount="7" FirstPageText="«" LastPageText="»" />
+    <PagerStyle />
+    <EditRowStyle />
+    <EmptyDataRowStyle />
+    <EmptyDataTemplate>
+        La consulta no generó resultados.
+    </EmptyDataTemplate>
+</asp:GridView>

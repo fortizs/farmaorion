@@ -1,0 +1,605 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Farmacia.Site" %>
+
+<%@ Register Src="~/Controles/Cargando.ascx" TagPrefix="uc1" TagName="Cargando" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<title>::TunkiFact::El aliado que tu negocio necesita!</title>
+
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link href="<%= ResolveClientUrl("~/Recursos/Font/icomoon/icomoon.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= ResolveClientUrl("~/Recursos/plugins/bootstrap/css/bootstrap.min.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= ResolveClientUrl("~/Recursos/assets/css/componentes.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= ResolveClientUrl("~/Recursos/assets/css/plugins.css") %>" rel="stylesheet" type="text/css" />
+	<link href="<%= ResolveClientUrl("~/Recursos/assets/css/azul.css") %>" rel="stylesheet" type="text/css" />
+
+	<script src='<%= ResolveClientUrl("~/Recursos/assets/js/libs/jquery-3.1.1.min.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/bootstrap/js/popper.min.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/bootstrap/js/bootstrap.min.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/moment/moment.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/daterangepicker/daterangepicker.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/mask/mask.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/sweetalert/sweetalert.js") %>' type="text/javascript"></script>
+
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/sweetalerts/sweetalert2.min.js") %>' type="text/javascript"></script>
+
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/perfect-scrollbar/perfect-scrollbar.min.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/assets/js/app.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/app.js") %>' type="text/javascript"></script>
+	<script src='<%= ResolveClientUrl("~/Recursos/plugins/pagerequest.js") %>' type="text/javascript"></script>
+
+	<link href='<%= ResolveClientUrl("~/Recursos/assets/img/ally/favicon.ico") %>' rel="icon" type="image/x-icon">
+
+	<link href="<%= ResolveClientUrl("~/Recursos/assets/css/demo/nifty-demo-icons.min.css") %>" rel="stylesheet" type="text/css" />
+
+
+	<script>
+		$(document).ready(function () {
+			App.init();
+		});
+	</script>
+
+	<style>
+		.ui-table > tbody > tr > th {
+			font-size: 12px !important;
+		}
+
+		.ui-table > tbody > tr > td {
+			font-size: 10px !important;
+		}
+
+		.layout-px-spacing {
+			padding: 6px 16px !important;
+		}
+
+
+		[class^="icon-"], [class*=" icon-"] {
+			font-size: 20px;
+		}
+
+
+		.ui-table {
+			margin-bottom: 0;
+			border: none;
+		}
+
+			.ui-table .btn {
+				padding: 2px;
+				width: 100%;
+				height: 25px;
+			}
+
+			.ui-table p {
+				padding: 2px 0;
+				line-height: 15px;
+				margin: 0;
+			}
+
+			.ui-table > tbody > tr > td, .ui-table > tbody > tr > th, .ui-table > tfoot > tr > td, .ui-table > tfoot > tr > th, .ui-table > thead > tr > td, .ui-table > thead > tr > th {
+				vertical-align: middle;
+				border: none;
+				padding: 5px;
+				font-size: 12px;
+			}
+
+			.ui-table > tbody > tr {
+				-webkit-transition: background-color ease-in-out .15s;
+				-o-transition: background-color ease-in-out .15s;
+				transition: background-color ease-in-out .15s;
+			}
+
+				.ui-table > tbody > tr:hover td {
+					background: #fff4e1;
+				}
+
+				.ui-table > tbody > tr > th {
+					text-align: center;
+					border: 1px solid #e4e4e4;
+					font-weight: bold;
+					background: #f7f7f7;
+					font-weight: 700;
+					font-size: 12px;
+					text-transform: uppercase;
+					text-align: center;
+					border: 1px solid #e4e4e4;
+					font-weight: bold;
+					background: #f7f7f7;
+				}
+
+				.ui-table > tbody > tr > td {
+					border: 1px solid #e4e4e4;
+				}
+
+			.ui-table .gpag span {
+				padding: 3px 8px;
+				display: block;
+				border: 1px solid #092f6d;
+				/*background: #1b55e2;*/
+				margin: 1px;
+				border-radius: 3px;
+				color: #ffffff;
+			}
+
+			.ui-table .gpag a {
+				padding: 3px 8px;
+				display: block;
+				border: 1px solid #dddddd;
+				background: #dddddd;
+				margin: 1px;
+				/*border-radius: 3px;*/
+				margin-right: 5px;
+				border-radius: 50%;
+				padding: 8px 12px;
+				border: none;
+				line-height: 1.25;
+			}
+
+			.ui-table .gsel {
+				background: #fff4e1;
+			}
+
+			.ui-table ul.icons-list li {
+				display: inline-block;
+			}
+
+				.ui-table ul.icons-list li a {
+					display: inline-block;
+					height: auto;
+					padding: 2px;
+					margin: 0 1px;
+				}
+
+			.ui-table .gpag span {
+				padding: 3px 8px;
+				display: block;
+				margin: 1px;
+				color: #ffffff;
+				margin-right: 5px;
+				border-radius: 50%;
+				padding: 8px 12px;
+				border: none;
+				line-height: 1.25;
+			}
+
+
+		.icons-list {
+			margin: 0;
+			padding: 0;
+			line-height: 1;
+			font-size: 0;
+		}
+
+		.icons-list, .list-icons li {
+			list-style: none;
+		}
+
+
+
+		.etiqueta {
+			height: 18px;
+			display: block;
+			clear: both;
+		}
+
+
+		.form-control {
+			border-radius: 7px;
+			background: #fff;
+			border-color: #ddd;
+			height: 37px;
+			padding: 5px 5px;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			font-size: 12px;
+		}
+
+		.form-group {
+			margin-bottom: 7px;
+			position: relative;
+		}
+
+		.requerido {
+			border-left: 2px solid #ffa46f !important;
+		}
+
+		.tab-content {
+			border: 1px solid #e0e6ed;
+			border-top: none;
+			padding: 10px;
+		}
+
+
+		.has-feedback {
+			position: relative;
+		}
+
+		.form-control-feedback {
+			top: 17px;
+		}
+
+		.form-control-feedback {
+			position: absolute;
+			top: 30px;
+			right: 0;
+			z-index: 2;
+			display: block;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			pointer-events: none;
+		}
+
+		.ui-cargando {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: none;
+			z-index: 99999;
+			-webkit-transition: opacity 1000ms ease-in;
+			-moz-transition: opacity 1000ms ease-in;
+			transition: opacity 1000ms ease-in;
+		}
+
+
+		.espacio {
+			padding: 4px;
+		}
+
+
+
+
+		.ui-table ul.icons-list li {
+			display: inline-block;
+			padding: 1px;
+		}
+
+		.form-group label, label {
+			font-size: 13px;
+			color: #000000;
+			letter-spacing: 0px;
+		}
+
+		#sidebar .theme-brand {
+			background-color: #ffffff;
+		}
+
+			#sidebar .theme-brand li.theme-text a {
+				color: #000000 !important;
+			}
+
+
+		#sidebar .theme-brand {
+			justify-content: end !important;
+		}
+
+		.swal2-popup swal2-toast swal2-show {
+			width: 350px;
+		}
+
+		.requerido {
+			border-left: 2px solid #ff5e00 !important;
+		}
+
+		.modal-body {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+
+		.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+			padding-right: 3px;
+			padding-left: 3px;
+		}
+
+		.form-control {
+			height: 30px;
+		}
+
+		/*.btn-primary {
+			color: #fff !important;
+			background-color: #1b55e2 !important;
+			border-color: #1b55e2;
+			box-shadow: 0 10px 20px -10px #1b55e2;
+		}
+
+		.btn-primary {
+			background-color: #1b55e2;
+			border: 1px solid #1b55e2;
+		}
+
+		.btn-primary {
+			color: #fff !important;
+			background-color: #1b55e2 !important;
+			border-color: #1b55e2;
+			box-shadow: 0 10px 20px -10px #1b55e2;
+		}*/
+
+		.btn {
+			font-size: 11px;
+		}
+
+		.tab-pane {
+			padding: 14px;
+		}
+
+
+
+
+		#content {
+			padding: 17px;
+		}
+
+		.panel {
+			border: 1px solid #ddd;
+		}
+
+		.panel {
+			margin-bottom: 20px;
+			background-color: #fff;
+			border: 1px solid transparent;
+			border-radius: 3px;
+			-webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+			box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+		}
+
+		.panel-heading {
+			padding: 15px 20px;
+			border-bottom: 1px solid transparent;
+		}
+
+		.panel-heading {
+			border-top-right-radius: 3px;
+			border-top-left-radius: 3px;
+		}
+
+		.h3.panel-title, h3.panel-title {
+			font-size: 16px;
+			font-weight: bold;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #ddd;
+			color: #f07d00;
+		}
+
+		.panel-flat > .panel-heading + .panel-body {
+			padding-top: 0;
+		}
+
+		.panel-body {
+			padding: 20px;
+		}
+
+		.row {
+			margin-right: -5px;
+			margin-left: -5px;
+		}
+
+		.ui-table .gsel {
+			border: 1px solid #f9dd34;
+			background: #ffef8f url(plugins/jquery_ui/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png) 50% top repeat-x;
+		}
+
+		.ui-table > tbody > tr:hover td {
+			border: 1px solid #f9dd34;
+			background: #ffef8f url(plugins/jquery_ui/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png) 50% top repeat-x;
+		}
+
+		[class^="icon-"], [class*=" icon-"] {
+			font-size: 16px;
+		}
+
+
+		[class^="demo-pli-"], [class*=" demo-pli-"], [class^="demo-psi-"], [class*=" demo-psi-"] {
+			font-size: 20px;
+		}
+		 
+	</style>
+	<asp:ContentPlaceHolder ID="cphCabecera" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body class="alt-menu sidebar-noneoverflow">
+
+	<form id="frmPrincipal" runat="server">
+
+
+
+
+		<asp:HiddenField ID="hfIDModulo" runat="server" Value="0" />
+
+		<asp:HiddenField ID="hfIDPrincipal" runat="server" Value="0" />
+		<asp:HiddenField ID="hfIDMenu" runat="server" Value="0" />
+		<asp:ScriptManager ID="smPrincipal" runat="server" AsyncPostBackTimeout="120000" EnableScriptGlobalization="true" EnableScriptLocalization="true" ScriptMode="Release"></asp:ScriptManager>
+
+		<!--  BEGIN NAVBAR  -->
+		<div class="header-container fixed-top">
+
+			<header class="header navbar navbar-expand-sm expand-header">
+				<a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+						<line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+				 
+				<ul class="navbar-item flex-row ml-auto">
+					<li class="nav-item dropdown notification-dropdown">
+						<a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell">
+								<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge badge-success"></span>
+						</a>
+						<div class="dropdown-menu position-absolute e-animated e-fadeInUp" aria-labelledby="notificationDropdown">
+							<div class="notification-scroll">
+
+								<div class="dropdown-item">
+									<div class="media">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-box">
+											<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+										<div class="media-body">
+											<div class="notification-para">
+												<span class="user-name"><a href="<%= ResolveClientUrl("~/Almacen/AlertaProductos.aspx") %>">
+													<asp:Literal ID="ltCantidadProductoStockBajo" runat="server" Text="0"></asp:Literal>
+													productos están por agotarse</a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="dropdown-item">
+									<div class="media">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle">
+											<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+										<div class="media-body">
+											<div class="notification-para">
+												<span class="user-name"><a href="<%= ResolveClientUrl("~/Almacen/ProductoxVencer.aspx") %>">
+													<asp:Literal ID="ltCantidadProductoxVencer" runat="server" Text="0"></asp:Literal>
+													productos están por vencer</a></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
+						<a href="javascript:void(0);" style="display: -webkit-inline-box;" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<div class="user-profile-section" style="padding: 0px 20px;">
+								<div class="media mx-auto">
+									<asp:Literal ID="ltfoto" runat="server"></asp:Literal>
+									<div class="media-body" style="margin-top: 4px;">
+										<h5 style="font-size: 14px; font-weight: 700; margin-bottom: 0; color: #000000; margin: 0;">
+											<asp:Literal ID="lUsuario" runat="server"></asp:Literal></h5>
+										<p style="font-size: 11px; font-weight: 700; color: #ff7600; margin: 0; margin-top: -15px;">
+											<asp:Literal ID="ltNombreSucursal" runat="server"></asp:Literal>
+										</p>
+									</div>
+								</div>
+							</div>
+							<i class="icon-arrow-down22"></i>
+						</a>
+						<div class="dropdown-menu position-absolute e-animated e-fadeInUp" aria-labelledby="userProfileDropdown">
+							<div class="dropdown-item">
+								<asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Seguridad/MiPerfil.aspx">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+										<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+									<span>Mi Perfil</span></asp:HyperLink>
+							</div>
+							<div class="dropdown-item">
+								<asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Seguridad/CambiarClaveUsuario.aspx">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox">
+										<polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+									<span>Cambiar Clave</span></asp:HyperLink>
+							</div>
+							<div class="dropdown-item">
+								<asp:HyperLink ID="lSO" runat="server" NavigateUrl="~/Login.aspx?Logout=SO">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out">
+										<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+									<span>Cerrar Sesión</span></asp:HyperLink>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</header>
+		</div>
+		<!--  END NAVBAR  -->
+
+		<!--  BEGIN MAIN CONTAINER  -->
+		<div class="main-container sidebar-closed sbar-open" id="container">
+
+			<div class="overlay"></div>
+			<div class="cs-overlay"></div>
+			<div class="search-overlay"></div>
+
+			<!--  BEGIN SIDEBAR  -->
+			<div class="sidebar-wrapper sidebar-theme">
+
+				<nav id="sidebar">
+
+					<ul class="navbar-nav theme-brand flex-row  text-center">
+						<li class="nav-item theme-logo" style="margin-left: -15px;">
+
+							<asp:HyperLink ID="HyperLink4" runat="server" class="nav-link" NavigateUrl="~/Default.aspx"> 
+									<img src="<%= ResolveClientUrl("~/Recursos/assets/img/ally/logo.png") %>" class="navbar-logo" alt="logo"></asp:HyperLink>
+
+						</li>
+						<li class="nav-item theme-text">
+							<asp:HyperLink ID="HyperLink3" runat="server" class="nav-link" NavigateUrl="~/Default.aspx"> 
+									 Ally </asp:HyperLink>
+
+						</li>
+					</ul>
+
+					<ul class="list-unstyled menu-categories" id="accordionExample">
+
+						<li class="menu active">
+							<a href="#dashboard" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+								<div class="">
+									<i class="demo-pli-home"></i>
+									<span>Menú del Sistema</span>
+								</div>
+							</a>
+						</li>
+
+						<asp:Literal ID="lMenuSis" runat="server"></asp:Literal>
+					</ul>
+
+				</nav>
+
+			</div>
+			<!--  END SIDEBAR  -->
+
+			<!--  BEGIN CONTENT AREA  -->
+			<div id="content" class="main-content">
+
+				<%--<nav class="breadcrumb-two" aria-label="breadcrumb" style="margin-left: 29px; padding: 3px;">
+					<ol class="breadcrumb">
+						<asp:Literal ID="lBreadCrumb" runat="server"></asp:Literal>
+					</ol>
+				</nav>--%>
+
+
+				<asp:ContentPlaceHolder ID="cphPrincipal" runat="server"></asp:ContentPlaceHolder>
+			</div>
+			<!--  END CONTENT AREA  -->
+
+		</div>
+
+
+
+		<!-- END MAIN CONTAINER -->
+		<asp:UpdateProgress ID="upCargando" runat="server" DisplayAfter="0">
+			<ProgressTemplate>
+				<uc1:Cargando ID="Cargando" runat="server" />
+			</ProgressTemplate>
+		</asp:UpdateProgress>
+		<script type="text/jscript">
+
+			function GenerarMenuSuperior(pIDModulo, pIDUsuario) {
+				console.log("a");
+
+				//$("#btnGenerar").trigger('click')
+				$("#btnGenerar").click();
+				console.log("b");
+			}
+
+
+			Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandlerLogSys);
+			function EndRequestHandlerLogSys(sender, args) {
+				if (args.get_error() != undefined) {
+					var errorMessage = args.get_error().message;
+					if (args.get_response().get_statusCode() == '12030' || args.get_response().get_statusCode() == '12031') {
+						args.set_errorHandled(true);
+						window.location.reload();
+					} else {
+						args.set_errorHandled(true);
+						Mensaje('error', '¡Ha ocurrido un error inesperado!<br> Intente nuevamente o contacte con el Servicio de Soporte del Sistema.<br><span class=\"help-block\"><i class="fa fa-info-circle"></i> Sugerencias: <br> - Verifique su conexión a Internet <br> - Vuelva a ingresar al sistema</span>');
+						console.log(errorMessage);
+						console.log(args.get_response().get_statusCode());
+					}
+				}
+			}
+		</script>
+	</form>
+</body>
+</html>
